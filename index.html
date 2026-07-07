@@ -4,22 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriConnectSummit—Accueil</title>
-<link rel="stylesheet" href="FAYE-ELHADJIOUSSEYNOU-AfriConnectSummit/css/style.css">
+<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
-
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="Nav-logo" >AfriConnect Summit 2026</a>
+            <ul class="Nav-links">
+                <li>
+                    <a href="index.html" class="active">Accueil</a>
+                </li>
+                <li>
+                    <a href="programme.html">Programme</a>
+                </li>
+                <li>
+                    <a href="intervenants.html">Intervenants</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+             <div class="nav-buttons">
+                <button id="theme-toggle"></button>
+                <button class="hamburger"></button>
+            </div>
+        </nav>
     </header>
 
     <main>
+        <section class="Hero">
+                <h1>Le Futur de la Tech s'écrit Ici. Êtes-vous Prêt ?</h1>
+                <p class="Hero-subtitle">Dakar, Sénégal - Du 15 au 17 Octobre 2026</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn">S'inscrire</a>
+                    <a href="programme.html" class="btn">Le programme</a>
+                </div>
+                <div class="countdown">
+                    <div> <span id="jour">00</span>Jours</div>
+                    <div> <span id="heure">00</span>Heures</div>
+                   <div> <span id="minute">00</span>Minutes</div>
+                    <div> <span id="seconde">00</span>Secondes</div>
+                </div>
+        </section>
+        <section class="stats">
+            <h2>L'évenement en quelques chiffres</h2>
+            <div class="stats-container">
+                <div class="parti-stats">
+                     <span class="num" nombre="1200">0</span>
+                    <p>Participants</p>
+                </div>
+                 <div class="parti-stats">
+                     <span class="num" nombre="48">0</span>
+                    <p>Intervenants</p>
+                </div>
+                 <div class="parti-stats">
+                     <span class="num" nombre="3">0</span>
+                    <p>Jours</p>
+                </div>
+                 <div class="parti-stats">
+                     <span class="num" nombre="12">0</span>
+                    <p>Pays</p>
+                </div>
+            </div>
+        </section>
+        <section class="arguments">
+            <h2>Pourquoi participer ?</h2>
+            <div class="container-argu">
+                <article class="partie-article">
+                    <i class="bi bi-cpu"></i>
+                    <h3>Apprendre</h3>
+                    <p>Découvrir les nouvelles technologies et les innovations en Afrique.</p>
+                </article>
+                 <article class="partie-article">
+                    <i class="bi bi-pop"></i>
+                    <h3>Rencontrer</h3>
+                    <p>Créer un réseau avec des professionnels et d'autres étudiants.</p>
+                </article>
+                 <article class="partie-article">
+                    <i class="bi bi-stage"></i>
+                    <h3>Opportunités</h3>
+                    <p>Trouver des stages ou des financements pour vos projets.</p>
+                </article>
+            </div>
+        </section>
+        <section class="intervenants">
+            <h2>Quelques intervenants</h2>
+             <div class="inter-grille">
+                <article class="inter-carte">
+                    <img src="" alt="Portrait de Amadou Diallo">
+                    <h3>Amadou Diallo</h3>
+                    <p>Expert IA (Sénégal)</p>
+                </article>
+                <article class="inter-carte">
+                    <img src="" alt="Portrait de Amina Mensah">
+                    <h3> Amina Mensah</h3>
+                    <p>Entrepreneure (Ghana)</p>
+                </article>
+                <article class="inter-carte">
+                    <img src="" alt="Portrait de Chimenda Oke">
+                    <h3> Chimenda Oke</h3>
+                    <p>Designer UX (Nigeria)</p>
+                </article>
+                 <article class="inter-carte">
+                    <img src="" alt="Portrait de Moussa Traoré">
+                    <h3>Moussa Traoré</h3>
+                    <p>Ingénieur Cloud (Côte d'Ivoire)</p>
+                </article>
+                </div>
+                <a href="intervenants.html" class="link-more">Voir tous les intervenants</a>
+        </section>
+        <section class="sponsor">
+            <h2>Nos sponsors</h2>
+            <div class="sponsor-level">
+                <h3>Or</h3>
+                <div class="logo-flex"><div>Logo 1</div><div>Logo 2</div></div>
+            </div>
 
+             <div class="sponsor-level">
+                <h3>Argent</h3>
+                <div class="logo-flex"><div>Logo 3</div><div>Logo 4</div></div>
+            </div>
+            <div class="sponsor-level">
+                <h3>Bronze</h3>
+                <div class="logo-flex"><div>Logo 5</div><div>Logo 6</div></div>
+            </div>
+
+        </section>
     </main>
 
-    <footer>
+    <footer class="footer">
+        <div class="grille-footer">
+            <div>
+                 <h3>AfriConnect</h3>
+                <p>Un grand sommet pour la tech africaine.</p>
+            </div>
+           
+             <div>
+                 <h3>AfriConnect</h3>
+                <p>
+                    <a href="index.html">Accueil</a> 
+                    <a href="programme.html">Programme</a>
+                </p>
+            </div>
+
+             <div>
+                 <h3>Réseaux</h3>
+                <p>Twitter & LinkedIn</p>
+                 <p class="copy">&copy; <span id="year"></span> AfriConnect. Tous droits réservés.</p>
+        <button id="back-to-top"></button>
+            </div>
+
+        </div>
 
     </footer>
 
     
-    <script src="FAYE-ELHADJIOUSSEYNOU-AfriConnectSummit/js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

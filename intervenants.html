@@ -4,22 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriConnectSummit—Intervenants</title>
-<link rel="stylesheet" href="FAYE-ELHADJIOUSSEYNOU-AfriConnectSummit/css/style.css">
+<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
-
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="Nav-logo" >AfriConnect Summit 2026</a>
+            <ul class="Nav-links">
+                <li>
+                    <a href="index.html" >Accueil</a>
+                </li>
+                <li>
+                    <a href="programme.html">Programme</a>
+                </li>
+                <li>
+                    <a href="intervenants.html" class="active">Intervenants</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main>
+        <section class="Titre">
+              <h1>Rencontrez les Cerveaux qui Révolutionnent le Continent</h1>
+            <p class="breadcrumb"><a href="index.html">Accueil</a> && Intervenants</p>
+        </section>
+
+        <section class="filtre">
+            <button class="filtre active" data-cat="all">Tous</button>
+            <button class="filtre" data-cat="tech">IA &amp; Tech</button>
+            <button class="filtre" data-cat="business">Business</button>
+            <button class="filtre" data-cat="design">Design</button>
+            <button class="filtre" data-cat="data">Data</button>
+        </section>
+
+        <section class="intervenants-liste">
+            <div class="grille-intervenants">
+                <article class="intervenant-card" categorie="tech"><img src="images/intervenant1.jpg" alt="Photo 1"><h3>Amadou Diallo</h3><p>Sénégal</p></article>
+                <article class="intervenant-card" categorie="business"><img src="images/intervenant2.jpg" alt="Photo 2"><h3>Amina Mensah</h3><p>Ghana</p></article>
+                <article class="intervenant-card" categorie="design"><img src="images/intervenant3.jpg" alt="Photo 3"><h3>Chimenda Oke</h3><p>Nigeria</p></article>
+                <article class="intervenant-card" categorie="data"><img src="images/intervenant4.jpg" alt="Photo 4"><h3>Moussa Traoré</h3><p>Côte d'Ivoire</p></article>
+                <article class="intervenant-card" categorie="tech"><img src="images/intervenant5.jpg" alt="Photo 5"><h3>Fatoumata Ba</h3><p>Mali</p></article>
+                <article class="intervenant-card" categorie="business"><img src="images/intervenant6.jpg" alt="Photo 6"><h3>Samuel Kamau</h3><p>Kenya</p></article>
+                <article class="intervenant-card" categorie="design"><img src="images/intervenant7.jpg" alt="Photo 7"><h3>Zara Mahamat</h3><p>Tchad</p></article>
+                <article class="intervenant-card" categorie="data"><img src="images/intervenant8.jpg" alt="Photo 8"><h3>Omar Diop</h3><p>Mauritanie</p></article>
+                <article class="intervenant-card" categorie="tech"><img src="images/intervenant9.jpg" alt="Photo 9"><h3>Elsa Radia</h3><p>Cameroun</p></article>
+            </div>
+
+        </section>
 
     </main>
 
-    <footer>
-        
-    </footer>
+     <footer class="footer">
+        <div class="grille-footer">
+            <div>
+                 <h3>AfriConnect</h3>
+                <p>Un grand sommet pour la tech africaine.</p>
+            </div>
+           
+             <div>
+                 <h3>AfriConnect</h3>
+                <p>
+                    <a href="index.html">Accueil</a> 
+                    <a href="programme.html">Programme</a>
+                </p>
+            </div>
 
+             <div>
+                 <h3>Réseaux</h3>
+                <p>Twitter & LinkedIn</p>
+                 <p class="copy">&copy; <span id="year"></span> AfriConnect. Tous droits réservés.</p>
+        <button id="back-to-top"></button>
+            </div>
+
+        </div>
+
+    </footer>
     
-    <script src="FAYE-ELHADJIOUSSEYNOU-AfriConnectSummit/js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

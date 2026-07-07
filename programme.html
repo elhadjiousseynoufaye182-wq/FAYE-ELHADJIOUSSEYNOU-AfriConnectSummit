@@ -4,22 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriConnectSummit—Programme</title>
-<link rel="stylesheet" href="FAYE-ELHADJIOUSSEYNOU-AfriConnectSummit/css/style.css">
+<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
-
+   <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="Nav-logo" >AfriConnect Summit 2026</a>
+            <ul class="Nav-links">
+                <li>
+                    <a href="index.html" >Accueil</a>
+                </li>
+                <li>
+                    <a href="programme.html" class="active">Programme</a>
+                </li>
+                <li>
+                    <a href="intervenants.html">Intervenants</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
 
+    <main>
+        <section  class="Titre">
+            <h1>3 Jours Intenses pour Dompter le Code & l'IA</h1>
+            <p class="tete"><a href="index.html">Accueil</a>&& Programme</p>
+        </section>
+
+        <section class="Programme">
+             <div class="tabs">
+                <button class="tab-link active" nombre-j1="1">Jour 1</button>
+                <button class="tab-link"nombre-j2="2">Jour 2</button>
+                <button class="tab-link" nombre-j3="3">Jour 3</button>
+                </div>
+
+                <div class="tab-I">
+                    <div id="day-1" class="panel active">
+                    <table bordure="1">
+                        <thead>
+                            <tr><th>Heure</th><th>Sujet</th><th>Intervenant</th><th>Salle</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>09h00</td><td>Accueil</td><td>Équipe</td><td>Hall</td></tr>
+                            <tr><td>10h00</td><td>Conférence IA</td><td>A. Diallo</td><td>Amphi A</td></tr>
+                            <tr><td>11h30</td><td>Tech & Agro</td><td>A. Mensah</td><td>Salle 1</td></tr>
+                            <tr><td>14h00</td><td>Fintech</td><td>M. Traoré</td><td>Amphi A</td></tr>
+                            <tr><td>16h00</td><td>Atelier Code</td><td>Professeur</td><td>Labo</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div id="Jour-2" class="panel">
+                <table border="1">
+                    <thead>
+                        <tr><th>Heure</th><th>Sujet</th><th>Intervenant</th><th>Salle</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>09h00</td><td>Design UI</td><td>C. Oke</td><td>Amphi B</td></tr>
+                        <tr><td>10h30</td><td>Data Science</td><td>Invité 1</td><td>Salle 2</td></tr>
+                        <tr><td>14h00</td><td>Web3 Afrique</td><td>Invité 2</td><td>Amphi A</td></tr>
+                        <tr><td>15h30</td><td>Startups</td><td>Jury</td><td>Hall</td></tr>
+                        <tr><td>17h00</td><td>Concours Pitch</td><td>Candidats</td><td>Amphi A</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="Jour-2" class="panel">
+            <table bordure="1">
+                <thead>
+                    <tr><th>Heure</th><th>Sujet</th><th>Intervenant</th><th>Salle</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>09h00</td><td>Design UI</td><td>C. Oke</td><td>Amphi B</td></tr>
+                    <tr><td>10h30</td><td>Data Science</td><td>Invité 1</td><td>Salle 2</td></tr>
+                    <tr><td>14h00</td><td>Web3 Afrique</td><td>Invité 2</td><td>Amphi A</td></tr>
+                    <tr><td>15h30</td><td>Startups</td><td>Jury</td><td>Hall</td></tr>
+                    <tr><td>17h00</td><td>Concours Pitch</td><td>Candidats</td><td>Amphi A</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="Jour-2" class="panel" >
+            <table bordure="1">
+                <thead>
+                    <tr><th>Heure</th><th>Sujet</th><th>Intervenant</th><th>Salle</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>09h30</td><td>Cybersécurité</td><td>Invité 3</td><td>Salle 1</td></tr>
+                    <tr><td>11h00</td><td>Green Tech</td><td>Invité 4</td><td>Amphi B</td></tr>
+                    <tr><td>14h00</td><td>Bonnes pratiques JS</td><td>R. Diassé</td><td>Labo</td></tr>
+                    <tr><td>15h30</td><td>Remise des prix</td><td>Jury</td><td>Amphi A</td></tr>
+                    <tr><td>16h30</td><td>Clôture</td><td>Tous</td><td>Hall</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+        </section>
+
+        <section class="theme">
+             <h2>Les thèmes principaux</h2>
+             <div class="themes-grid">
+                <div class="theme-card"><h3>IA &amp; Tech</h3><p>Discussions sur l'intelligence artificielle.</p></div>
+                <div class="theme-card"><h3>Business</h3><p>Création et financement de projets.</p></div>
+                <div class="theme-card"><h3>Design</h3><p>Création de belles interfaces web.</p></div>
+                <div class="theme-card"><h3>Data</h3><p>Gestion et sécurité des données.</p></div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        
+     <footer class="footer">
+        <div class="grille-footer">
+            <div>
+                 <h3>AfriConnect</h3>
+                <p>Un grand sommet pour la tech africaine.</p>
+            </div>
+           
+             <div>
+                 <h3>AfriConnect</h3>
+                <p>
+                    <a href="index.html">Accueil</a> 
+                    <a href="programme.html">Programme</a>
+                </p>
+            </div>
+
+             <div>
+                 <h3>Réseaux</h3>
+                <p>Twitter & LinkedIn</p>
+                 <p class="copy">&copy; <span id="year"></span> AfriConnect. Tous droits réservés.</p>
+        <button id="back-to-top"></button>
+            </div>
+
+        </div>
+
     </footer>
 
     
-    <script src="FAYE-ELHADJIOUSSEYNOU-AfriConnectSummit/js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

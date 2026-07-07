@@ -4,22 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriConnectSummit—Contact</title>
-<link rel="stylesheet" href="FAYE-ELHADJIOUSSEYNOU-AfriConnectSummit/css/style.css">
+<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
-
-    </header>
+    <nav class="navbar">
+            <a href="index.html" class="Nav-logo" >AfriConnect Summit 2026</a>
+            <ul class="Nav-links">
+                <li>
+                    <a href="index.html" >Accueil</a>
+                </li>
+                <li>
+                    <a href="programme.html">Programme</a>
+                </li>
+                <li>
+                    <a href="intervenants.html">Intervenants</a>
+                </li>
+                <li>
+                    <a href="contact.html" >Contact</a>
+                </li>
+            </ul>
+        </nav>
 
     <main>
+        <section class="Titre">
+              <h1>Prenez votre Place dans l'Histoire de la Tech Africaine</h1>
+            <p class="breadcrumb"><a href="index.html">Accueil</a> && Contact</p>
+        </section>
+
+        <section class="contact">
+            <div class="forme-container">
+                <div class="col-forme">
+                    <h2>S'inscrire</h2>
+                    <div id="success" style="display:none; color:green;">Formulaire envoyé !</div>
+                    <form action="" id="forme">
+                        <label>Nom complet :</label>
+                        <input type="text" id="nom">
+                        <span class="erreur" id="err-name"></span>
+
+                        <label>Email :</label>
+                        <input type="email" id="useremail">
+                        <span class="erreur" id="err-email"></span>
+
+
+                        <label>Téléphone :</label>
+                        <input type="tel" id="tel">
+                        <span class="erreur" id="err-phone"></span>
+
+                        <label>Ticket :</label>
+                        <select id="ticket">
+                            <option value="">--Choisir--</option>
+                            <option value="1">Standard</option>
+                            <option value="2">Premium</option>
+                        </select>
+                        <span class="erreur" id="err-ticket"></span>
+
+                        <label for="">pays (Min. 10 pays obligatoires) </label>
+                        <select name="" id="pays">
+                             <option value="">--Choisir--</option>
+                            <option value="SN">Sénégal</option><option value="CI">Côte d'Ivoire</option>
+                            <option value="MA">Maroc</option><option value="NG">Nigeria</option>
+                            <option value="GH">Ghana</option><option value="CM">Cameroun</option>
+                            <option value="ML">Mali</option><option value="BF">Burkina Faso</option>
+                            <option value="TG">Togo</option><option value="BJ">Bénin</option>
+                        </select>
+                        <span class="erreur" id="err-pays"></span>
+                        <label for="">Message:</label>
+                        <textarea name="" id="Message"></textarea>
+                        <span class="erreur" id="err-mesage"></span>
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+                <div class="col-info">
+                    <h2>Nos coordonnées</h2>
+                    <p>Adresse : Centre de Conférences, Dakar</p>
+                    <p>Email : info@africonnect.com</p>
+                    <iframe src="https://google.com" width="100%" height="200" style="border:0;" 
+                    allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+        
+        <section class="faq">
+            <h2>FAQ (Questions fréquentes)</h2>
+            <div class="accordion">
+                 <input type="acc-partie" id="q1">
+                    <label >Où se passe l'événement ?</label>
+                    <div class="content"><p>L'événement se passe à Dakar.</p></div>
+                </div>
+                <div class="faq-item">
+                    <input type="acc-partie" id="q2">
+                    <label>Est-ce gratuit ?</label>
+                    <div class="content"><p>Non, l'inscription est obligatoire via le formulaire.</p></div>
+                </div>
+                <div class="faq-item">
+                    <input type="acc-partie" id="q3">
+                    <label>Qui peut venir ?</label>
+                    <div class="content"><p>Tout le monde (étudiants, pros, passionnés).</p></div>
+                </div>
+                 <div class="faq-item">
+                    <input type="acc-partie" id="q4">
+                    <label>Y aura-t-il des repas ?</label>
+                    <div class="content"><p>Oui, pour les tickets Premium.</p></div>
+                </div>
+                <div class="faq-item">
+                    <input type="acc-partie" id="q5">
+                    <label>Peut-on suivre en ligne ?</label>
+                    <div class="content"><p>Oui, les liens seront envoyés par mail.</p></div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
-    <footer>
-        
+     <footer class="footer">
+        <div class="grille-footer">
+            <div>
+                 <h3>AfriConnect</h3>
+                <p>Un grand sommet pour la tech africaine.</p>
+            </div>
+           
+             <div>
+                 <h3>AfriConnect</h3>
+                <p>
+                    <a href="index.html">Accueil</a> 
+                    <a href="programme.html">Programme</a>
+                </p>
+            </div>
+
+             <div>
+                 <h3>Réseaux</h3>
+                <p>Twitter & LinkedIn</p>
+                 <p class="copy">&copy; <span id="year"></span> AfriConnect. Tous droits réservés.</p>
+        <button id="back-to-top"></button>
+            </div>
+
+        </div>
+
     </footer>
 
     
-    <script src="FAYE-ELHADJIOUSSEYNOU-AfriConnectSummit/js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
