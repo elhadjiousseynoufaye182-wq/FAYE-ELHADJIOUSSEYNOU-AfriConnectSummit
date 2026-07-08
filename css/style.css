@@ -1,0 +1,66 @@
+@import url('https:googleapis.com');
+:root {
+    --police-titre: 'Montserrat',sans-serif;
+    --police-corps: 'Open Sans',sans-serif;
+
+    --couleur-primaire: #78350f;
+    --couleur-secondaire: #451a03;
+
+    --couleur-fond:#fef3c7; 
+    --couleur-texte: #292524;  
+    
+    --arrondi-composant: 8px;
+    --transition-vitesse: 0.3s ease ;
+
+}
+
+[data-theme='dark'] {
+    --couleur-fond: #1c1917;  
+    --couleur-texte: #f5f5f4;    
+    --couleur-primaire: #fcd34d;
+    --couleur-secondaire: #2e2a24;  
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--police-corps);
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    line-height: 1.6;
+
+    transition: background-color var(--transition-vitesse), color var(--transition-vitesse);
+
+}
+
+h1,h2,h3,h4 {
+    font-family: var(--police-titre);
+    color: var(--couleur-secondaire);
+    transition: color var(--transition-vitesse);
+}
+
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] h4 {
+    color: var(--couleur-texte);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+
+
