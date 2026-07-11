@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <nav class="navbar">
             <a href="index.html" class="Nav-logo" >AfriConnect Summit 2026</a>
             <ul class="Nav-links">
@@ -26,7 +26,7 @@
             </ul>
              <div class="nav-buttons">
                 <button id="theme-toggle">mode</button>
-                <button class="hamburger"></button>
+                <button id="hamburger">☰</button>
             </div>
         </nav>
     </header>
@@ -124,30 +124,32 @@
     </main>
 
      <footer class="footer">
-        <div class="grille-footer">
-            <div>
-                 <h3>AfriConnect</h3>
-                <p>Un grand sommet pour la tech africaine.</p>
-            </div>
-           
-             <div>
-                 <h3>AfriConnect</h3>
-                <p>
-                    <a href="index.html">Accueil</a> 
-                    <a href="programme.html">Programme</a>
-                </p>
-            </div>
+    <div class="grille-footer">
 
-             <div>
-                 <h3>Réseaux</h3>
-                <p>Twitter & LinkedIn</p>
-                 <p class="copy">&copy; <span id="year"></span> AfriConnect. Tous droits réservés.</p>
-        <button id="back-to-top"></button>
-            </div>
-
+        <div>
+            <h3>AfriConnect</h3>
+            <p>Un grand sommet pour la tech africaine.</p>
         </div>
 
-    </footer>
+        <div>
+            <h3>Navigation</h3>
+            <p><a href="index.html">Accueil</a></p>
+            <p><a href="programme.html">Programme</a></p>
+        </div>
+
+        <div>
+            <h3>Réseaux</h3>
+            <p>Twitter & LinkedIn</p>
+        </div>
+
+    </div>
+
+    <p class="copy">
+        &copy; <span id="year"></span> AfriConnect. Tous droits réservés.
+    </p>
+
+    <button id="back-to-top">↑</button>
+</footer>
 
     
     <script src="./js/main.js"></script>

@@ -1,4 +1,4 @@
-@import url('https:googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
 :root {
     --police-titre: 'Montserrat',sans-serif;
     --police-corps: 'Open Sans',sans-serif;
@@ -43,6 +43,11 @@ h1,h2,h3,h4 {
     color: var(--couleur-secondaire);
     transition: color var(--transition-vitesse);
 }
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 [data-theme='dark'] h1,
 [data-theme='dark'] h2,
@@ -60,7 +65,164 @@ ul {
     list-style: none;
 }
 
+.main-header {
+    background-color: var(--couleur-secondaire);
+    color: #ffffff; 
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    padding: 15px 5%;
+}
 
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Nav-logo{
+    font-family: var(--police-titre);
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.Nav-links{
+    display: flex;
+    gap: 20px;
+}
+.Nav-links a {
+    color: #000000; 
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: color var(--transition-vitesse);
+}
+
+.Nav-links a:hover, 
+.Nav-links a.active {
+    color: var(--couleur-fond); 
+    opacity: 0.9;
+}
+
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#theme-toggle {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 0;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#theme-toggle::after {
+    content: "🌙";       
+    font-size: 1.4rem;  
+    position: absolute;
+
+}
+
+.hamburger {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: none;
+}
+
+#theme-toggle:hover,
+.hamburger:hover {
+    transform: scale(1.1);
+    transition: transform var(--transition-vitesse);
+}
+main {
+    display: block; 
+    width: 100%;
+    padding: 20px 5%; 
+}
+.footer {
+    width: 100%;
+    max-width: 100%;
+    margin: 50px 0 0 0;
+    padding: 40px 5% 20px;
+    background-color: var(--couleur-secondaire);
+    color: #f5f5f4;
+}
+
+.grille-footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+}
+
+.grille-footer div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer a {
+    color:  #f5f5f4;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+.copy {
+    text-align: center;
+    font-size:  0.9rem;
+    position: relative;
+}
+#back-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--couleur-primaire);
+    color: #ffffff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: none;
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .Nav-links {
+        display: none; 
+    }
+    
+    .hamburger {
+        display: block; 
+    }
+
+    .grille-footer {
+        flex-direction: column; 
+    }
+}
 
 
 
