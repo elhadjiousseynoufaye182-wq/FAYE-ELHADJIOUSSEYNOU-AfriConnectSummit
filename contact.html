@@ -9,6 +9,7 @@
 <body>
     <header class="main-header">
         <nav class="navbar">
+              <img src="./images/logo.png" width="80" height="80">
             <a href="index.html" class="Nav-logo" >AfriConnect Summit 2026</a>
             <ul class="Nav-links">
                 <li>
@@ -21,12 +22,12 @@
                     <a href="intervenants.html">Intervenants</a>
                 </li>
                 <li>
-                    <a href="contact.html" >Contact</a>
+                    <a href="contact.html " class="active" >Contact</a>
                 </li>
             </ul>
              <div class="nav-buttons">
                 <button id="theme-toggle">mode</button>
-                <button id="hamburger">☰</button>
+                <button class="hamburger">☰</button>
             </div>
         </nav>
     </header>
@@ -35,14 +36,14 @@
     <main>
         <section class="Titre">
               <h1>Prenez votre Place dans l'Histoire de la Tech Africaine</h1>
-            <p class="breadcrumb"><a href="index.html">Accueil</a> && Contact</p>
+            <p class="entete"><a href="index.html">Accueil</a> / Contact</p>
         </section>
 
         <section class="contact">
             <div class="forme-container">
                 <div class="col-forme">
                     <h2>S'inscrire</h2>
-                    <div id="success" style="display:none; color:green;">Formulaire envoyé !</div>
+                    <div id="success">Formulaire envoyé !</div>
                     <form action="" id="forme">
                         <label>Nom complet :</label>
                         <input type="text" id="nom">
@@ -67,7 +68,7 @@
 
                         <label for="">pays (Min. 10 pays obligatoires) </label>
                         <select name="" id="pays">
-                             <option value="">--Choisir--</option>
+                            <option value="">--Choisir--</option>
                             <option value="SN">Sénégal</option><option value="CI">Côte d'Ivoire</option>
                             <option value="MA">Maroc</option><option value="NG">Nigeria</option>
                             <option value="GH">Ghana</option><option value="CM">Cameroun</option>
@@ -94,28 +95,29 @@
         <section class="faq">
             <h2>FAQ (Questions fréquentes)</h2>
             <div class="accordion">
-                 <input type="acc-partie" id="q1">
-                    <label >Où se passe l'événement ?</label>
+                <div class="faq-item">
+                 <input type="checkbox" id="q1">
+                    <label for="q1">Où se passe l'événement ?</label>
                     <div class="content"><p>L'événement se passe à Dakar.</p></div>
                 </div>
                 <div class="faq-item">
-                    <input type="acc-partie" id="q2">
-                    <label>Est-ce gratuit ?</label>
+                    <input type="checkbox" id="q2">
+                    <label for="q2" >Est-ce gratuit ?</label>
                     <div class="content"><p>Non, l'inscription est obligatoire via le formulaire.</p></div>
                 </div>
                 <div class="faq-item">
-                    <input type="acc-partie" id="q3">
-                    <label>Qui peut venir ?</label>
+                    <input type="checkbox" id="q3">
+                    <label for="q3">Qui peut venir ?</label>
                     <div class="content"><p>Tout le monde (étudiants, pros, passionnés).</p></div>
                 </div>
                  <div class="faq-item">
-                    <input type="acc-partie" id="q4">
-                    <label>Y aura-t-il des repas ?</label>
+                    <input type="checkbox" id="q4">
+                    <label for="q4">Y aura-t-il des repas ?</label>
                     <div class="content"><p>Oui, pour les tickets Premium.</p></div>
                 </div>
                 <div class="faq-item">
-                    <input type="acc-partie" id="q5">
-                    <label>Peut-on suivre en ligne ?</label>
+                    <input type="checkbox" id="q5">
+                    <label for="q5">Peut-on suivre en ligne ?</label>
                     <div class="content"><p>Oui, les liens seront envoyés par mail.</p></div>
                 </div>
             </div>
@@ -123,9 +125,9 @@
 
     </main>
 
-     <footer class="footer">
+<footer class="footer">
     <div class="grille-footer">
-
+          <img src="./images/logo.png" width="80" height="80">
         <div>
             <h3>AfriConnect</h3>
             <p>Un grand sommet pour la tech africaine.</p>
