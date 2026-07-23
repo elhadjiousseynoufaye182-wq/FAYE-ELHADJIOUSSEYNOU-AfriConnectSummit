@@ -87,3 +87,47 @@ if (boutonRetour) {
         });
     });
 }
+var mesBoutonsOnglets = document.querySelectorAll(".tab-link");
+var mesPanneaux = document.querySelectorAll(".panel");
+for (var i = 0; i < mesBoutonsOnglets.length; i++) {
+    mesBoutonsOnglets[i].addEventListener("click", function() {
+        for (var j = 0; j < mesBoutonsOnglets.length; j++) {
+            mesBoutonsOnglets[j].classList.remove("active");
+        }
+         this.classList.add("active");
+
+        var jourCible = this.getAttribute("nombre-j");
+        for (var k = 0; k < mesPanneaux.length; k++) {
+            mesPanneaux[k].classList.remove("active");
+        }
+        
+        var panneauAAfficher = document.getElementById("jour-" + jourCible);
+        if (panneauAAfficher) {
+            panneauAAfficher.classList.add("active");
+       }
+    });
+}
+
+var boutonsFiltres = document.querySelectorAll(".filtre-btn");
+var cartesIntervenants = document.querySelectorAll(".intervenant-card");
+
+for (var a = 0; a < boutonsFiltres.length; a++) {
+    boutonsFiltres[a].addEventListener("click", function() {
+        for (var b = 0; b < boutonsFiltres.length; b++) {
+            boutonsFiltres[b].classList.remove("active");
+        }
+        this.classList.add("active");
+
+        var categorieChoisie = this.getAttribute("data-cat");
+
+        for (var c = 0; c < cartesIntervenants.length; c++) {
+            var categorieCarte = cartesIntervenants[c].getAttribute("categorie");
+
+            if (categorieChoisie === "all" || categorieChoisie === categorieCarte) {
+                cartesIntervenants[c].style.display = "block"; 
+            } else {
+                cartesIntervenants[c].style.display = "none";  
+            }
+        }
+    });
+}
