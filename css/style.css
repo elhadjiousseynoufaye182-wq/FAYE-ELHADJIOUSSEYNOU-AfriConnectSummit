@@ -245,22 +245,27 @@ main {
 
 
 }
-.hero{
-    padding: 60px 0;
+
+.hero {
+    
+    background: linear-gradient(to bottom, rgba(69, 26, 3, 0.9), rgba(120, 53, 15, 0.7)),
+    url('../images/image_arriere-plan.png') no-repeat center center;
+    background-size: cover; 
+    background-attachment: scroll;
+    padding: 100px 5% 80px 5%;
     text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100vw; 
+    max-width: 100%;
+    color: #ffffff;
 }
-.hero h1{
-    font-size: clamp(1.8rem, 4vw, 3.2rem);
+.hero h1, .hero .sous-titre {
+    color: #ffffff !important;
+}
+.hero h1 {
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
     line-height: 1.2;
     margin-bottom: 20px;
-
-}
-.hero .sous-titre {
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
-    margin-bottom: 30px;
-    opacity: 0.9;
+    font-weight: 800;
 }
  .hero-buttons{
     display: flex;
@@ -300,7 +305,7 @@ main {
  .countdown span{
     font-size: clamp(1.6rem, 3vw, 2.5rem);
     font-weight: 800;
-    color: var(--couleur-primaire);
+    color: whitesmoke;
     display: block;
  }
 

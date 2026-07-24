@@ -131,3 +131,51 @@ for (var a = 0; a < boutonsFiltres.length; a++) {
         }
     });
 }
+var monFormulaire = document.getElementById("forme")
+if (monFormulaire) {
+    monFormulaire.addEventListener("submit", function(evenement) {
+        evenement.preventDefault();
+        var nom = document.getElementById("nom").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var telephone = document.getElementById("tel").value.trim();
+        var pays = document.getElementById("pays").value;
+        var message = document.getElementById("Message").value.trim();
+        document.getElementById("err-name").innerHTML = "";
+        document.getElementById("err-email").innerHTML = "";
+        document.getElementById("err-phone").innerHTML = "";
+        document.getElementById("err-pays").innerHTML = "";
+        document.getElementById("err-message").innerHTML = "";
+
+         var formulaireValide = true;
+        if (nom === "") {
+            document.getElementById("err-name").innerHTML = "Veuillez entrer votre nom complet.";
+            formulaireValide = false;
+        }
+
+        if (email === "" || email.indexOf("@") === -1 || email.indexOf(".") === -1) {
+            document.getElementById("err-email").innerHTML = "Veuillez entrer une adresse email valide.";
+            formulaireValide = false;
+        }
+        if (telephone === "" || telephone.length < 8) {
+            document.getElementById("err-phone").innerHTML = "Le numéro doit contenir au moins 8 chiffres.";
+            formulaireValide = false;
+        }
+
+         if (pays === "") {
+            document.getElementById("err-pays").innerHTML = "Veuillez choisir un pays de résidence.";
+            formulaireValide = false;
+        }
+
+         if (message === "" || message.length < 10) {
+            document.getElementById("err-message").innerHTML = "Votre message doit faire au moins 10 caractères.";
+            formulaireValide = false;
+        }
+
+        if (formulaireValide === true) {
+            var blocSucces = document.getElementById("success");
+            blocSucces.style.display = "block";
+            blocSucces.innerHTML = "Félicitations ! Votre inscription a été prise en compte.";
+             monFormulaire.reset();
+        }
+    });
+}
