@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+/* Déclaration des 8 variables css obligatoires */
 :root {
+    /* polices écritures */
     --police-titre: 'Montserrat',sans-serif;
     --police-corps: 'Open Sans',sans-serif;
-
+    /* couleurs principales */
     --couleur-primaire: #78350f;
     --couleur-secondaire: #451a03;
-
+    /* fond et texte */
     --couleur-fond:#fef3c7; 
     --couleur-texte: #292524;  
-    
+    /* design */
     --arrondi-composant: 8px;
     --transition-vitesse: 0.3s ease ;
 
 }
-
+/* dark mode basé sur le gris */
 body.dark-mode {
     --couleur-fond: #1c1917;  
     --couleur-texte: #f5f5f4;    
@@ -32,11 +34,11 @@ body{
     background-color: var(--couleur-fond);
     color: var(--couleur-texte);
     line-height: 1.6;
-
+     /* Transition fluide pour le changement de thème */
     transition: background-color var(--transition-vitesse), color var(--transition-vitesse);
 
 }
-
+/* Application de la police sur tous les titres */
 h1,h2,h3,h4 {
     font-family: var(--police-titre);
     color: var(--couleur-secondaire);
@@ -47,13 +49,14 @@ img {
     height: auto;
     display: block;
 }
-
+/* Ajustement de la couleur des titres en mode sombre */
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
 body.dark-mode h4 {
     color: var(--couleur-texte);
     }
+/* Nettoyage des liens et des listes */
 a {
     text-decoration: none;
     color: inherit;
@@ -62,19 +65,21 @@ a {
 ul {
     list-style: none;
 }
+/* --- BARRE DE NAVIGATION (HEADER) --- */
 
 .main-header {
     background-color: var(--couleur-secondaire);
     color: #ffffff; 
-    position: sticky; 
+    position: sticky; /* Reste fixé en haut au défilement */
     top: 0;
     z-index: 1000;
     padding: 15px 5%;
+    width: 100%;
 }
 
 .navbar{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;/* Espace entre le logo, les liens et les boutons */
     align-items: center;
     width: 100%;
     max-width: 1200px;
@@ -108,15 +113,16 @@ ul {
     font-weight: 600;
     padding: 5px 10px;
     transition: color var(--transition-vitesse);
+    font-size:1rem;
 }
-
+/* Effet au survol et lien actif */
 .Nav-links a:hover, 
 .Nav-links a.active {
-    color: var(--couleur-fond); 
+    color: var(--couleur-fond); /* Devient marron chaud au survol */
     opacity: 0.9;
 }
 
-
+/* Boutons d'actions de la navbar */
 .nav-buttons {
     display: flex;
     align-items: center;
@@ -169,12 +175,13 @@ main {
     padding: 40px 5% 20px;
     background-color: var(--couleur-secondaire);
     color: #f5f5f4;
+    width: 100%;
 }
 
 .grille-footer{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap;/* Permet de passer à la ligne sur petit écran */
     gap: 30px;
     margin-bottom: 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -183,7 +190,7 @@ main {
 
 .grille-footer div {
     flex: 1;
-    min-width: 200px;
+    min-width: 200px;/* Évite que les colonnes soient trop écrasées */
 }
 
 .footer h3 {
@@ -223,44 +230,114 @@ main {
     justify-content: center;
     line-height: 1;
 }
-
-@media (max-width: 768px) {
-    .Nav-links {
-        display: none; 
+/* --- ADAPTABILITÉ MOBILE (RESPONSIVE) --- */
+@media (max-width:375px){
+    .navbar{
+        padding: 0;
     }
+    .navbar img{
+        width:45px;
+        height:45px;
+    }
+    .Nav-logo{
+        font-size:0.8rem;
+    }
+    .nav-buttons{
+        gap:5px;
+    }
+    #theme-toggle{
+        width:25px;
+        height:25px;
+    }
+    .hamburger{
+        font-size:1.4rem;
+    }
+}
+@media (max-width:768px){
+    .Nav-logo{
+        font-size:1rem;
+    }
+    .Nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:var(--couleur-secondaire);
+        padding:20px;
+        text-align:center;
+    }
+    .Nav-links.active{
+        display:flex;
+    }
+    .Nav-links a{
+        font-size:1rem;
+        padding:10px 0;
+    }
+    .hamburger{
+        display:block;
+    }
+      .grille-footer{
+        flex-direction:column;
+        text-align:center;
+        align-items:center;
+    }
+    .grille-footer div{
+        width:100%;
+    }
+    } 
+  
     
-    .hamburger {
-        display: block; 
+
+@media (max-width:991px){
+    .navbar{
+        justify-content: space-between;
+    }
+    .Nav-logo{
+        font-size:1.1rem;
+    }
+    .Nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:90px;
+        left:0;
+        width:100%;
+        background:var(--couleur-secondaire);
+        padding:20px;
+        text-align:center;
+    }
+    .Nav-links.active{
+        display:flex;
+    }
+    .hamburger{
+        display:block;
     }
 
-  .grille-footer{
-    flex-direction:column;
-    text-align:center;
-    align-items:center;
 }
-
-.grille-footer div{
-    width:100%;
-}
-
-
-}
-
-.hero {
-    
+.hero{
     background: linear-gradient(to bottom, rgba(69, 26, 3, 0.9), rgba(120, 53, 15, 0.7)),
     url('../images/image_arriere-plan.png') no-repeat center center;
-    background-size: cover; 
+     background-size: cover; 
     background-attachment: scroll;
-    padding: 100px 5% 80px 5%;
-    text-align: center;
-    width: 100vw; 
+    width: 100%; 
     max-width: 100%;
-    color: #ffffff;
+    padding: 100px 20px 80px 20px;
+    text-align: center;
+    color: #ffffff; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.hero h1, .hero .sous-titre {
+.hero h1, 
+.hero .sous-titre { 
     color: #ffffff !important;
+    text-align: center; 
+    width: 100%;        
 }
+
 .hero h1 {
     font-size: clamp(1.8rem, 4vw, 3.5rem);
     line-height: 1.2;
@@ -321,6 +398,7 @@ main {
     max-width: 1200px;
     margin: 0 auto;
  }
+ /* Bento Grid pour les statistiques ou arguments */
  .stats-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -365,7 +443,7 @@ main {
     padding: 30px;
     transition: transform var(--transition-vitesse);
 }
-.partie-article{
+.partie-article:hover{
     transform: translateY(-5px);
 }
 
@@ -413,7 +491,7 @@ main {
 .link-more:hover{
     text-decoration: underline;
 }
-
+/* --- SECTION SPONSORS (Flexbox Centré) --- */
 .sponsors{
     padding: 60px 0;
     max-width: 1200px;
@@ -424,6 +502,7 @@ main {
 .sponsors h2{
     margin-bottom: 40px;
 }
+/* Sponsors Flexbox */
 .sponsor-level{
     margin-bottom: 30px;
 }
@@ -447,6 +526,7 @@ main {
     border-radius: var(--arrondi-composant);
     font-weight: 600;
 }
+/* --- EN-TÊTE COMMUN DES PAGES INTÉRIEURES --- */
 .Titre{
    padding: 60px 0;
    max-width: 1200px;
@@ -469,13 +549,13 @@ main {
     color:  var(--couleur-primaire);
     font-weight: 600;
 }
-
+/* --- DESIGN DE LA PAGE : PROGRAMME --- */
 .programme{
     padding: 30px 0;
    max-width: 1200px;
    margin: 0 auto;
 }
-
+/* Barrettes d'onglets (Flexbox) */
 .tabs{
     display: flex;
     justify-content: center;
@@ -499,13 +579,15 @@ main {
     color: #ffffff;
     border-color: var(--couleur-primaire);
 }
+/* Gestion de l'affichage des panneaux (en attendant le JS) */
 .panel{
-    display: none;
+    display: none;/* Masqué par défaut */ 
 }
 
 .panel.active{
-    display: block;
+    display: block; /* Seul le panneau actif s'affiche */
 }
+/* Style des tableaux  */
 table {
     width: 100%;
     border-collapse: collapse; /* Supprime les doubles bordures */
@@ -530,9 +612,9 @@ th {
 
 
 tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.3); 
+    background-color: rgba(255, 255, 255, 0.3); /* Effet zébré simple */
 }
-
+/* Grille des Thématiques (CSS Grid) */
 .theme{
     padding: 40px 0;
     text-align: center;
@@ -559,7 +641,7 @@ tr:nth-child(even) {
     margin-bottom: 10px;
     font-size: 1.2rem;
 }
-
+/* ---  DESIGN DE LA PAGE : INTERVENANTS --- */
 .filtre{
     display: flex;
     justify-content: center;
@@ -586,6 +668,7 @@ tr:nth-child(even) {
     background-color: var(--couleur-secondaire);
     color: #ffffff;
 }
+/* Grille complète des 9 intervenants obligatoires */
 .intervenants-liste{
     max-width: 1200px;
     margin: 0 auto 50px auto;
@@ -612,15 +695,17 @@ tr:nth-child(even) {
 .grille-intervenants .intervenant-card img {
     width: 100%;
     height: 240px;
-    object-fit: var(--arrondi-composant);
+    object-fit: cover;
+    border-radius: var(--arrondi-composant);
     margin-bottom: 15px;
 }
-
+/* --- DESIGN DE LA PAGE : CONTACT & FAQ --- */
 .contact{
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
 }
+/* Structure à deux colonnes (Flexbox) */
 
 .forme-container{
     display: flex;
@@ -650,7 +735,7 @@ tr:nth-child(even) {
     margin-bottom: 20px;
     font-size: 1.4rem;
 }
-
+/* Champs du formulaire d'examen */
 #forme label{
     display: block;
     margin-top: 15px;
@@ -676,6 +761,7 @@ tr:nth-child(even) {
     border-color: var(--couleur-primaire);
     box-shadow: 0 0 0 3px rgba(120, 53, 15, 0.1);
 }
+/* Zone d'erreur pour le futur script JS */
 .erreur{
     color: #dc2626;
     font-size: 0.85rem;
@@ -763,17 +849,17 @@ tr:nth-child(even) {
 .faq-item input[type="checkbox"]:checked ~ label::after {
     transform: rotate(180deg);
 }
-
+/* --- RESPONSIVE ADAPTATION DES PAGES INTERNES --- */
 @media (max-width: 991px) {
-    .form-container {
-    flex-direction: column; 
+    .forme-container {
+    flex-direction: column; /* Aligne le formulaire et les infos verticalement */
     }
 }
 
 @media (max-width: 600px) {
     table {
         display: block;
-        overflow-x: auto; 
+        overflow-x: auto; /* Permet au tableau de glisser proprement sans casser l'écran */
     }
 }
 
